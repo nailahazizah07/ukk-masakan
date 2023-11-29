@@ -154,7 +154,8 @@ if (!isset($_SESSION['id_user'])) {
             <li><a href="index.php"><i class="glyphicon glyphicon-home"></i> <span>Beranda</span></a></li>
             </li>
             <?php
-            if ($_SESSION["id_level"] == '1') {
+            $level = $_SESSION["id_level"];
+            if (($level == 1) || ($level == 5)) {
             ?>
               <li class="treeview">
                 <a href="#">
@@ -168,9 +169,8 @@ if (!isset($_SESSION['id_user'])) {
                   <li><a href="index.php?page=data_order"><i class="glyphicon glyphicon-education"></i> <span>Data Orderan</span></a></li>
                 </ul>
               </li>
-            <?php } ?>
-            <?php
-            if ($_SESSION["id_level"] == '2') {
+            <?php }
+            if (($level == 4) || ($level == 5)) {
             ?>
               <li class="treeview">
                 <a href="#">
@@ -180,12 +180,15 @@ if (!isset($_SESSION['id_user'])) {
                   </span>
                 </a>
 
-                <ul class="treeview-menu">
+                <ul class="treeview-menu">  
                   <li><a href="index.php?page=data_masakan"><i class="glyphicon glyphicon-education"></i> <span>Data Menu Masakan</span></a></li>
                   <li><a href="index.php?page=data_level"><i class="glyphicon glyphicon-education"></i> <span>Data Level Resto</span></a></li>
                   <li><a href="index.php?page=data_user"><i class="glyphicon glyphicon-education"></i> <span>Data User Resto</span></a></li>
                 </ul>
               </li>
+              <?php }
+              if (($level == 2) || ($level == 3)|| ($level == 5)) {
+            ?>
               <li class="treeview">
                 <a href="#">
                   <i class="fas fa-folder" style="margin-right: 5px;"></i> <span>Data Transaksi</span>
@@ -198,64 +201,6 @@ if (!isset($_SESSION['id_user'])) {
                   <li><a href="index.php?page=data_detail"><i class="glyphicon glyphicon-education"></i> <span>Data Detail Orderan</span></a></li>
                   <li><a href="index.php?page=data_transaksi"><i class="glyphicon glyphicon-education"></i> <span>Data Transaksi</span></a></li>
                 </ul>
-              </li>
-            <?php } ?>
-            <?php
-            if ($_SESSION["id_level"] == '3') {
-            ?>
-              <a href="#">
-                <i class="fas fa-folder" style="margin-right: 5px;"></i> <span>Data Transaksi</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="index.php?page=data_transaksi"><i class="glyphicon glyphicon-education"></i> <span>Transaksi</span></a></li>
-                <li><a href="index.php?page=data_order"><i class="glyphicon glyphicon-education"></i> <span>Data Orderan Resto</span></a></li>
-                <li><a href="index.php?page=data_detail"><i class="glyphicon glyphicon-education"></i> <span>Data Detail Orderan</span></a></li>
-              </ul>
-              </li>
-            <?php } ?>
-            <?php
-            if ($_SESSION["id_level"] == '4') {
-            ?>
-              <a href="#">
-                <i class="fas fa-folder" style="margin-right: 5px;"></i> <span>Data Orderan Pelanggan</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="index.php?page=data_transaksi"><i class="glyphicon glyphicon-education"></i> <span>Transaksi</span></a></li>
-                <li><a href="index.php?page=data_order"><i class="glyphicon glyphicon-education"></i> <span>Data Orderan Resto</span></a></li>
-                <li><a href="index.php?page=data_detail"><i class="glyphicon glyphicon-education"></i> <span>Data Detail Orderan</span></a></li>
-              </ul>
-              </li>
-            <?php } ?>
-            <?php
-            if ($_SESSION["id_level"] == '5') {
-            ?>
-              <li class="treeview">
-                <a href="#">
-                  <i class="fas fa-folder" style="margin-right: 5px;"></i> <span>Data Resto</span>
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-                </a>
-
-                <ul class="treeview-menu">
-                  <li><a href="index.php?page=data_masakan"><i class="glyphicon glyphicon-education"></i> <span>Data Menu Masakan</span></a></li>
-                  <li><a href="index.php?page=data_level"><i class="glyphicon glyphicon-education"></i> <span>Data Level Resto</span></a></li>
-                  <li><a href="index.php?page=data_user"><i class="glyphicon glyphicon-education"></i> <span>Data User Resto</span></a></li>
-                </ul>
-              </li>
-              <li class="treeview">
-                <a href="#">
-                  <i class="fas fa-folder" style="margin-right: 5px;"></i> <span>Data Transaksi</span>
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-                </a>
               </li>
             <?php } ?>
             <li class="header">SETTING</li>
