@@ -21,7 +21,7 @@
           <form role="form" method="post" action="pages/transaksi/tambah_transaksi_proses.php">
             <div class="box-body">
               <div class="form-group">
-                <label>PILIH</label>
+                <label>PILIH TRANSAKSI</label>
                 <input type="text" name="id_order" id="id_order" class="form-control pencarian">
               </div>
               <input type="hidden" name="id_user" id="id_user" class="form-control pencarian" placeholder="Pilih Pelanggan" readonly required>

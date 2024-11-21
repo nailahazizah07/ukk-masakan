@@ -50,7 +50,6 @@
                   <th>NO MEJA</th>
                   <th>TANGGAL</th>
                   <th>TOTAL BAYAR</th>
-                  <th class="hide-on-print">AKSI</th>
                 </tr>
               </thead>
               <tbody>
@@ -75,10 +74,6 @@
                     <td><?php echo $row['no_meja']; ?></td>
                     <td><?php echo $row['tanggal']; ?></td>
                     <td>Rp <?php echo number_format($total_bayar, 0, ',', '.'); ?></td>
-                    <td class="hide-on-print">
-                      <a href="pages/transaksi/hapus_transaksi.php?id=<?= $row['id_transaksi']; ?>" class="btn btn-danger" role="button" title="Hapus Data" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
-                        <i class="glyphicon glyphicon-trash"></i>
-                    </td>
                   </tr>
 
                 <?php } ?>
